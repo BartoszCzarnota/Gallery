@@ -1,0 +1,217 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	background-color: #000;
+}
+.container {
+	display: flex;
+	display: -webkit-flex;
+	max-width: 1200px;
+	margin: 0 auto;
+	min-height: 60px;
+}
+/* HEADER */
+header {
+	background-color: #bfbfbf;
+	height: inherit;
+}
+header nav {
+	justify-content: flex-end;
+}
+header nav ul {
+	display: -webkit-flex;
+	display: flex;
+	list-style: none;
+	width: 100%;
+	justify-content: center;
+	
+}
+header ul li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+}
+header nav ul li a {
+	text-decoration: none;
+	color: #fff;
+	text-transform: capitalize;
+	font-size: 23px;
+}
+/* JUMBOTRON */
+
+.jumbotron {
+	background-image: url('https://images.pexels.com/photos/128994/pexels-photo-128994.jpeg?h=950&auto=compress&cs=tinysrgb');
+	background-position: center;
+	background-size: cover;
+	/*height: calc(100vh-60px);*/
+	height: 50vh;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.jumbotron h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #4d4d4d;
+	font-size: 45px;
+	text-shadow: 2px 2px #ffffff;
+}
+/* GALLERY */
+
+/*[class*="img-"] {
+	background-image: url('http://placehold.it/400x400');
+}*/
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.img {
+	height: 400px;
+	width: 400px;
+	border-radius: 6%;
+	margin: 5px;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.3;
+}
+.img-1 {
+	background-image: url('https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?h=350&auto=compress&cs=tinysrgb');
+}
+.img-2 {
+	background-image: url('https://images.pexels.com/photos/205002/pexels-photo-205002.jpeg?h=350&auto=compress&cs=tinysrgb');
+}
+.img-3 {
+	background-image: url('https://images.pexels.com/photos/106132/pexels-photo-106132.jpeg?h=350&auto=compress&cs=tinysrgb');
+}
+.img-4 {
+	background-image: url('https://images.pexels.com/photos/128458/pexels-photo-128458.jpeg?h=350&auto=compress&cs=tinysrgb');
+}
+.img-5 {
+	background-image: url('https://images.pexels.com/photos/169672/pexels-photo-169672.jpeg?h=350&auto=compress&cs=tinysrgb');
+}
+.img-6 {
+	background-image: url('https://images.pexels.com/photos/7306/pexels-photo.jpeg?h=350&auto=compress&cs=tinysrgb');
+}
+.img:hover {
+	
+	opacity: 1;
+	cursor: pointer;
+}
+
+/* CARDS */
+
+.flex-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: row;
+}
+.card {
+	min-width: 200px;
+	min-height: 100px;
+	margin: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	background-color: #b3b3b3;
+	text-transform: capitalize;
+	font-size: 17px;
+}
+.card:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+	background-color: #2e2e1f;
+	height: inherit;
+}
+footer .container {
+	justify-content: center;
+}
+.copyrights, .corporation, .contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	padding: 10px;
+}
+.copyrights {
+	flex: 1;
+}
+.corporation {
+	flex: 2;
+}
+.contact {
+	flex: 1;
+}
+
+/* MEDIA */
+
+/*@media (min-width: 768px) and (max-width: 1199px) {
+	header nav {
+		justify-content: center;
+		align-items: center;
+	}
+	header nav ul li a {
+		font-size: 20px;
+	}
+}
+@media (max-width: 767px) {
+	header nav {
+		flex-direction: column;
+		align-items: center;
+	}
+	header ul {
+		flex-direction: column;
+		align-items: center;
+		padding: 10px;
+	}
+	header nav ul li a {
+		font-size: 20px;
+	}
+} kod powyżej działa ok w RWD Firefox'a na iPadzie, na "żywym" S5 jest źle */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+	header nav {
+		justify-content: center;
+		align-items: center;
+	}
+	header ul {
+		flex-direction: column;
+		align-items: center;
+	}
+	header nav ul li a {
+		font-size: 30px;
+		padding: 20px;
+	}
+	.img, .img:hover {
+	opacity: 1;
+	}
+}
+@media (max-width: 767px) {
+	header nav {
+		flex-direction: column;
+		align-items: center;
+	}
+	header ul {
+		flex-direction: column;
+		align-items: center;
+		padding: 10px;
+	}
+	header nav ul li a {
+		font-size: 20px;
+	}
+	.img, .img:hover {
+	opacity: 1;
+	}
+}	
